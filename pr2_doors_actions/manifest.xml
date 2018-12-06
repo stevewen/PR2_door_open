@@ -1,0 +1,44 @@
+<package>
+  <description>
+    The highlevel controllers for the door domain
+  </description>
+
+  <author>Wim Meeussen</author>
+  <license>BSD</license>
+  <url>http://pr.willowgarage.com</url>
+  <review status="experimental" notes="beta"/>
+
+  <depend package="roscpp" />
+  <depend package="kdl" />
+  <depend package="tf"/>
+
+  <depend package="actionlib" />
+  <depend package="pr2_common_action_msgs" />
+  <depend package="pr2_arm_move_ik" />
+  <depend package="joint_trajectory_generator" />
+
+  <depend package="std_msgs" />
+  <depend package="diagnostic_msgs" />
+  <depend package="diagnostic_updater" />
+  <depend package="door_msgs" />
+  <depend package="move_base_msgs" />
+  <depend package="geometry_msgs" />
+  <depend package="actionlib_msgs" />
+  <depend package="pr2_controllers_msgs"/>
+
+  <depend package="door_handle_detector" />
+  <depend package="pr2_doors_common"/>
+  <depend package="tff_controller"/>
+
+  <depend package="costmap_2d"/>
+  <depend package="base_local_planner"/>
+  <depend package="laser_assembler"/>
+  <depend package="pr2_laser_snapshotter"/>
+  <export>
+    <cpp cflags="-I${prefix}/include" lflags="-Wl,-rpath,${prefix}/lib -L${prefix}/lib "/>
+  </export>
+
+
+
+  <platform os="ubuntu" version="10.04"/>
+</package>

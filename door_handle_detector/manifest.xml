@@ -1,0 +1,45 @@
+<package>
+  <description>
+    A node which detects doors and handles from 3D point cloud data.
+  </description>
+
+  <author>Radu Bogdan Rusu, Marius</author>
+  <license>BSD</license>
+  <url>http://pr.willowgarage.com</url>
+  <review status="experimental" notes="beta"/>
+
+  <depend package="pr2_machine"/>
+  <depend package="ANN_doors"/>
+
+  <depend package="roscpp" />
+  <depend package="tf"/>
+
+  <depend package="kdl" />
+  <depend package="opencv2"/>
+  <depend package="cv_bridge"/>
+
+  <depend package="std_msgs" />
+  <depend package="geometry_msgs" />
+  <depend package="mapping_msgs" />
+  <depend package="door_msgs" />
+  <depend package="sensor_msgs"/>
+  <depend package="stereo_msgs"/>
+  <depend package="visualization_msgs" />
+  <depend package="std_srvs" />
+
+  <depend package="angles" />
+  <depend package="laser_assembler" />
+  <depend package="pr2_doors_common" />
+
+  <depend package="common_rosdeps" />
+  <rosdep name="eigen" />
+
+ <export>
+    <cpp cflags="-I${prefix}/include" />
+ </export>
+
+
+  <platform os="ubuntu" version="9.04"/>
+  <platform os="ubuntu" version="9.10"/>
+  <platform os="ubuntu" version="10.04"/>
+</package>

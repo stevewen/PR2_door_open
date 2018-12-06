@@ -1,0 +1,31 @@
+<package>
+  <description brief="tff_controller">
+
+     tff_controller
+
+  </description>
+  <author>Wim Meeussen</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/tff_controller</url>
+  <depend package="kdl"/>
+  <depend package="tf"/>
+  <depend package="pr2_controller_interface"/>
+  <depend package="pr2_mechanism_model"/>
+  <depend package="realtime_tools"/>
+  <depend package="control_toolbox"/>
+  <depend package="geometry_msgs"/>
+  <depend package="pluginlib" />
+
+  <export>
+    <cpp cflags="-I${prefix}/include"
+         lflags="-Wl,-rpath,${prefix}/lib/ -L${prefix}/lib -ltff_controller" />
+   <pr2_controller_interface plugin="${prefix}/controller_plugins.xml" />
+  </export>
+
+  <platform os="ubuntu" version="9.04"/>
+  <platform os="ubuntu" version="9.10"/>
+  <platform os="ubuntu" version="10.04"/>
+</package>
+
+
